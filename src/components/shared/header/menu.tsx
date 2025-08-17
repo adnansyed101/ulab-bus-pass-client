@@ -1,6 +1,5 @@
-import { Link } from "react-router";
 import ModeToggle from "./mode-toggle";
-import { EllipsisVertical, ShoppingCart } from "lucide-react";
+import { EllipsisVertical } from "lucide-react";
 import UserButton from "./user-button";
 import {
   Sheet,
@@ -9,17 +8,23 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
 
 const Menu = () => {
   return (
     <div className="flex justify-end gap-3">
-      <nav className="hiddem md:flex w-full max-w-xs gap-1">
+      <nav className="hidden md:flex items-center w-full max-w-xs gap-4">
         {/* Theme Toggle */}
+        <a href="https://ulab.edu.bd/" target="_blank" className="hover-css">
+          Home
+        </a>
+        <a
+          href="https://urms-online.ulab.edu.bd/"
+          target="_blank"
+          className="hover-css"
+        >
+          URMS
+        </a>
         <ModeToggle />
-        <Link to="/cart">
-          <ShoppingCart /> Cart
-        </Link>
         <UserButton />
       </nav>
       <nav className="md:hidden">
@@ -30,11 +35,6 @@ const Menu = () => {
           <SheetContent className="flex flex-col items-start p-4">
             <SheetTitle>Menu</SheetTitle>
             <ModeToggle />
-            <Button asChild variant={"ghost"}>
-              <Link to={"/cart"}>
-                <ShoppingCart /> Cart
-              </Link>
-            </Button>
             <UserButton />
             <SheetDescription></SheetDescription>
           </SheetContent>

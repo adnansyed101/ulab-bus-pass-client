@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router";
 
-const UserButton = async () => {
+const UserButton = () => {
   const firstInitial = "U";
 
   return (
