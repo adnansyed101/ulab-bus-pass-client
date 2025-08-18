@@ -7,7 +7,7 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 
-const Home = () => {
+const StudentHomePage = () => {
   return (
     <>
       <SidebarProvider>
@@ -37,4 +37,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default StudentHomePage;
