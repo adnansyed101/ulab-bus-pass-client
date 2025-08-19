@@ -1,12 +1,18 @@
 import { Route, Routes } from "react-router";
 import Login from "./pages/auth/Login";
-import Home from "./pages/student/Home";
+import StudentHomePage from "./pages/student/StudentHomePage";
+import AdminHomePage from "./pages/admin/AdminHomePage";
 
 const App = () => {
+  const role: "user" | "admin" | "conductors" = "user";
+
   return (
     <Routes>
       <Route path="/" element={<Login />} />
-      <Route path="/home" element={<Home />} />
+      <Route
+        path="/home"
+        element={role === "user" ? <StudentHomePage /> : <AdminHomePage />}
+      />
     </Routes>
   );
 };
