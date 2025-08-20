@@ -1,5 +1,12 @@
 import * as React from "react";
-import { Bus, Home, Search, ShoppingCart, TableOfContents } from "lucide-react";
+import {
+  Bus,
+  Home,
+  ScrollText,
+  Search,
+  ShoppingCart,
+  TableOfContents,
+} from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
 import { NavUser } from "@/components/nav-user";
@@ -32,7 +39,7 @@ const navMain = [
     icon: Search,
   },
   {
-    title: "Cart",
+    title: "Buy Trips",
     url: "#",
     icon: ShoppingCart,
   },
@@ -40,6 +47,11 @@ const navMain = [
     title: "Transaction History",
     url: "#",
     icon: TableOfContents,
+  },
+  {
+    title: "Location Details",
+    url: "#",
+    icon: ScrollText,
   },
 ];
 
