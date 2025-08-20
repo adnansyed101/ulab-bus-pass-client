@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router";
 import Login from "./pages/auth/Login";
-import StudentHomePage from "./pages/student/StudentHomePage";
+import StudentHomePage from "./pages/student/home/StudentHomePage";
 import AdminHomePage from "./pages/admin/AdminHomePage";
 
 const App = () => {
