@@ -6,7 +6,8 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import { UserTripsCard } from "@/components/user-trips-card";
+import ShowCards from "./components/show-cards";
+import { BusSeatLayout } from "@/components/bus-seat-layout";
 
 const UsersHomePage = () => {
   const remainingTrips = [
@@ -64,13 +65,19 @@ const UsersHomePage = () => {
               Take a Trip.
             </h3>
             <div className="grid auto-rows-min gap-4 md:grid-cols-4">
-              {remainingTrips.length > 0 ? (
-                remainingTrips.map((trips) => <UserTripsCard {...trips} />)
-              ) : (
-                <h2 className="pl-2">No Trips Purchased/Remaining</h2>
-              )}
+              <ShowCards cardData={remainingTrips} />
             </div>
-            <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
+            <div className="bg-muted/50 min-h-[100vh] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 flex-1 rounded-xl md:min-h-min">
+              {["Bus 1", "Bus 2", "Bus 3", "Bus 4"].map((bus) => (
+                <BusSeatLayout
+                  key={bus}
+                  occupiedSeats={[1, 3, 7, 12, 15, 18, 22, 28, 31, 35, 39]}
+                  onSeatSelect={(seatId) =>
+                    console.log(`Seat ${seatId} selected`)
+                  }
+                />
+              ))}
+            </div>
           </div>
         </SidebarInset>
       </SidebarProvider>
