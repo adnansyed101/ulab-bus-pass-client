@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/sidebar";
 import { UserTripsCard } from "@/components/user-trips-card";
 
-const StudentHomePage = () => {
+const UsersHomePage = () => {
   const remainingTrips = [
     {
       id: "1",
@@ -78,4 +78,4 @@ const StudentHomePage = () => {
   );
 };
 
-export default StudentHomePage;
+export default UsersHomePage;
