@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router";
 import Login from "./pages/auth/Login";
-import StudentHomePage from "./pages/student/home/StudentHomePage";
+import UsersHomePage from "./pages/users/home/UsersHomePage";
 import AdminHomePage from "./pages/admin/AdminHomePage";
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
       <Route path="/" element={<Login />} />
       <Route
         path="/home"
-        element={role === "user" ? <StudentHomePage /> : <AdminHomePage />}
+        element={role === "user" ? <UsersHomePage /> : <AdminHomePage />}
       />
     </Routes>
   );
