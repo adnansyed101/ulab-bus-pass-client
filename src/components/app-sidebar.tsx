@@ -29,28 +29,28 @@ const user = {
 const navMain = [
   {
     title: "Home",
-    url: "/home",
+    url: "/users/home",
     icon: Home,
     isActive: true,
   },
   {
     title: "Buy Trips",
-    url: "/buy-trips",
+    url: "/users/buy-trips",
     icon: ShoppingCart,
   },
-   {
+  {
     title: "Overview",
-    url: "#",
+    url: "/users/overview",
     icon: Search,
   },
   {
     title: "Transaction History",
-    url: "#",
+    url: "/transaction-history",
     icon: TableOfContents,
   },
   {
     title: "Location Details",
-    url: "#",
+    url: "/location-details",
     icon: ScrollText,
   },
 ];
