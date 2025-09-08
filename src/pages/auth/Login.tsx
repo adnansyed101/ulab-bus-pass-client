@@ -8,7 +8,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    return navigate("/home");
+    return navigate("/users/home");
   };
 
   return (
