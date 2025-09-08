@@ -34,14 +34,14 @@ const navMain = [
     isActive: true,
   },
   {
+    title: "Buy Trips",
+    url: "/buy-trips",
+    icon: ShoppingCart,
+  },
+   {
     title: "Overview",
     url: "#",
     icon: Search,
-  },
-  {
-    title: "Buy Trips",
-    url: "#",
-    icon: ShoppingCart,
   },
   {
     title: "Transaction History",
