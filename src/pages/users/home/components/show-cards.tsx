@@ -5,7 +5,7 @@ const ShowCards = ({ cardData }: { cardData: UserTripsCardProps[] }) => {
   return (
     <>
       {cardData.length > 0 ? (
-        cardData.map((trips) => <UserTripsCard {...trips} />)
+        cardData.map((trips) => <UserTripsCard key={trips.id} {...trips} />)
       ) : (
         <h2 className="pl-2">No Trips Purchased/Remaining</h2>
       )}
