@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 interface SeatState {
   id: number;
   status: "empty" | "occupied" | "selected";
-  seatNumber: string;
+  seatNumber: number;
 }
 
 interface BusSeatLayoutProps {
@@ -23,20 +23,20 @@ export function BusSeatLayout({
   const [seats, setSeats] = useState<SeatState[]>(() => {
     const initialSeats: SeatState[] = [];
     for (let i = 1; i <= 40; i++) {
-      const row = Math.ceil(i / 4);
-      const position = ((i - 1) % 4) + 1;
-      let seatNumber = "";
+      // const row = Math.ceil(i / 4);
+      // const position = ((i - 1) % 4) + 1;
+      // let seatNumber = i;
 
-      if (position <= 2) {
-        seatNumber = `${row}${position === 1 ? "A" : "B"}`;
-      } else {
-        seatNumber = `${row}${position === 3 ? "C" : "D"}`;
-      }
+      // if (position <= 2) {
+      //   seatNumber = `${row}${position === 1 ? "A" : "B"}`;
+      // } else {
+      //   seatNumber = `${row}${position === 3 ? "C" : "D"}`;
+      // }
 
       initialSeats.push({
         id: i,
         status: occupiedSeats.includes(i) ? "occupied" : "empty",
-        seatNumber,
+        seatNumber: i,
       });
     }
     return initialSeats;
@@ -93,21 +93,21 @@ export function BusSeatLayout({
 
   return (
     <Card className="w-full max-w-md mx-auto">
-      <CardHeader>
+      <CardHeader className="px-2 md:px-6">
         <CardTitle className="text-center">Select Your Seats</CardTitle>
         <div className="text-center text-sm text-gray-600 mb-2">
           Maximum 5 seats can be selected
         </div>
-        <div className="flex justify-center gap-4 text-sm">
-          <div className="flex items-center gap-2">
+        <div className="flex justify-center gap-2 text-sm">
+          <div className="flex items-center gap-1">
             <div className="w-4 h-4 bg-gray-300 rounded"></div>
             <span>Available</span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             <div className="w-4 h-4 bg-blue-500 rounded"></div>
             <span>Occupied</span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             <div className="w-4 h-4 bg-green-500 rounded"></div>
             <span>Selected</span>
           </div>
