@@ -39,7 +39,7 @@ export default function MonthlySpendingChart() {
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="month" tick={{ fontSize: 12 }} />
               <YAxis tick={{ fontSize: 12 }} tickFormatter={(value) => `$${value}`} />
-              <ChartTooltip content={<ChartTooltipContent />} formatter={(value) => [`$${value}`, "Amount Spent"]} />
+              <ChartTooltip content={<ChartTooltipContent />} formatter={(value) => [`Tk ${value}`, " Amount Spent"]} />
               <Bar dataKey="amount" fill="var(--color-amount)" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
