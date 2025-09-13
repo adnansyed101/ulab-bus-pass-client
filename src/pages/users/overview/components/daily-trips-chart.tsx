@@ -1,6 +1,23 @@
-import { Line, LineChart, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
+import {
+  Line,
+  LineChart,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  ResponsiveContainer,
+} from "recharts";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@/components/ui/chart";
 
 // Sample data for daily trip usage (last 30 days)
 const dailyTripsData = [
@@ -34,28 +51,37 @@ const dailyTripsData = [
   { date: "Jan 28", trips: 44 },
   { date: "Jan 29", trips: 57 },
   { date: "Jan 30", trips: 63 },
-]
+];
 
 const chartConfig = {
   trips: {
     label: "Daily Trips",
     color: "hsl(var(--chart-1))",
   },
-}
+};
 
 export default function DailyTripsChart() {
   return (
-    <Card className="w-full">
+    <Card>
       <CardHeader>
         <CardTitle>Daily Trip Usage</CardTitle>
-        <CardDescription>Number of trips used per day over the last 30 days</CardDescription>
+        <CardDescription>
+          Number of trips used per day over the last 30 days
+        </CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="h-[300px]">
+        <ChartContainer config={chartConfig}>
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={dailyTripsData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+            <LineChart
+              data={dailyTripsData}
+              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+            >
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="date" tick={{ fontSize: 12 }} interval="preserveStartEnd" />
+              <XAxis
+                dataKey="date"
+                tick={{ fontSize: 14 }}
+                interval="preserveStartEnd"
+              />
               <YAxis tick={{ fontSize: 12 }} />
               <ChartTooltip content={<ChartTooltipContent />} />
               <Line
@@ -71,5 +97,5 @@ export default function DailyTripsChart() {
         </ChartContainer>
       </CardContent>
     </Card>
-  )
+  );
 }
