@@ -8,6 +8,7 @@ import MainLayout from "./layout/MainLayout.tsx";
 import UsersHomePage from "./pages/users/home/UsersHomePage.tsx";
 import BuyTrips from "./pages/users/buy-trips/BuyTrips.tsx";
 import OverviewPage from "./pages/users/overview/OverviewPage.tsx";
+import TransactionHisotryPage from "./pages/users/transaction-history/TransactionHisotryPage.tsx";
 
 const router = createBrowserRouter([
   { path: "/", index: true, element: <Login /> },
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "overview",
         element: <OverviewPage />,
+      },
+      {
+        path: "transaction-history",
+        element: <TransactionHisotryPage />,
       },
     ],
   },
