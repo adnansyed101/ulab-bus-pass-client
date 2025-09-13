@@ -23,7 +23,7 @@ const TripCart = () => {
           <TableRow>
             <TableHead>Destination</TableHead>
             <TableHead>Trip Amount</TableHead>
-            <TableHead>Total Price</TableHead>
+            <TableHead>Price</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -47,7 +47,7 @@ const TripCart = () => {
         </TableFooter>
       </Table>
       <div className="flex justify-end mt-4">
-        <Button>Purchase</Button>
+        <Button size='lg'>Purchase</Button>
       </div>
     </>
   );
