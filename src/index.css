@@ -122,6 +122,13 @@
   }
 }
 
+/* Remove increment/decrement arrows on number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .wrapper {
   @apply max-w-7xl lg:mx-auto p-5 md:px-10 w-full;
 }
