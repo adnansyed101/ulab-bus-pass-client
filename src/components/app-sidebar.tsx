@@ -45,12 +45,12 @@ const navMain = [
   },
   {
     title: "Transaction History",
-    url: "/transaction-history",
+    url: "/users/transaction-history",
     icon: TableOfContents,
   },
   {
     title: "Location Details",
-    url: "/location-details",
+    url: "/users/location-details",
     icon: ScrollText,
   },
 ];
