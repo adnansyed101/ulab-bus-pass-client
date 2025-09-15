@@ -9,6 +9,8 @@ import UsersHomePage from "./pages/users/home/UsersHomePage.tsx";
 import BuyTrips from "./pages/users/buy-trips/BuyTrips.tsx";
 import OverviewPage from "./pages/users/overview/OverviewPage.tsx";
 import TransactionHisotryPage from "./pages/users/transaction-history/TransactionHisotryPage.tsx";
+import AllLocationsPage from "./pages/users/location-details/AllLocationsPage.tsx";
+import LocationDetailsPage from "./pages/users/location-details/individual-locations/LocationDetailsPage.tsx"
 
 const router = createBrowserRouter([
   { path: "/", index: true, element: <Login /> },
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
       {
         path: "transaction-history",
         element: <TransactionHisotryPage />,
+      },
+      {
+        path: "location-details",
+        element: <AllLocationsPage />,
+      },
+      {
+        path: "location-details/:id",
+        element: <LocationDetailsPage />,
       },
     ],
   },
