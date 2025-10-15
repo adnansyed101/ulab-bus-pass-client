@@ -12,8 +12,11 @@ import TransactionHisotryPage from "./pages/users/transaction-history/Transactio
 import AllLocationsPage from "./pages/users/location-details/AllLocationsPage.tsx";
 import LocationDetailsPage from "./pages/users/location-details/individual-locations/LocationDetailsPage.tsx";
 import CartPage from "./pages/users/cart/CartPage.tsx";
+import AdminLogin from "./pages/auth/admin-login/AdminLogin.tsx";
+import AdminHomePage from "./pages/admin/AdminHomePage.tsx";
 
 const router = createBrowserRouter([
+  // User Links
   { path: "/", index: true, element: <UserLogin /> },
   {
     path: "users",
@@ -46,9 +49,15 @@ const router = createBrowserRouter([
       },
     ],
   },
+  // Admin Links
   {
     path: "admin-login",
-    element: <div>Hello World</div>,
+    element: <AdminLogin />,
+  },
+  {
+    path: "admin",
+    element: <MainLayout />,
+    children: [{ path: "home", element: <AdminHomePage /> }],
   },
 ]);
 
