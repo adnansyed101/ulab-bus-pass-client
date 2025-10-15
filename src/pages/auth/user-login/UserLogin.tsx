@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import ModeToggle from "@/components/shared/header/mode-toggle";
 import { useNavigate } from "react-router";
 
-const Login = () => {
+const UserLogin = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -60,4 +60,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default UserLogin;
