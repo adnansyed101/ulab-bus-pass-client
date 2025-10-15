@@ -8,7 +8,6 @@ import {
   TableOfContents,
   Ticket,
 } from "lucide-react";
-
 import { NavMain } from "@/components/sidebar/nav-main";
 import { NavUser } from "@/components/sidebar/nav-user";
 import {
@@ -25,9 +24,10 @@ const user = {
   name: "Md Adnan",
   email: "adnan.adnan.bba@ulab.edu.bd",
   avatar: "/avatars/shadcn.jpg",
+  role: "admin",
 };
 
-const navMain = [
+const userLinks = [
   {
     title: "Home",
     url: "/users/home",
@@ -61,6 +61,14 @@ const navMain = [
   },
 ];
 
+const adminLinks = [
+  {
+    title: "Home",
+    url: "/admin/home",
+    icon: Home,
+  },
+];
+
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
@@ -81,7 +89,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenuButton>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={navMain} />
+        <NavMain items={user.role === "user" ? userLinks : adminLinks} />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={user} />
