@@ -6,11 +6,12 @@ import ThemeProvider from "./providers/theme-provider.tsx";
 import Login from "./pages/auth/Login.tsx";
 import MainLayout from "./layout/MainLayout.tsx";
 import UsersHomePage from "./pages/users/home/UsersHomePage.tsx";
-import BuyTrips from "./pages/users/buy-trips/BuyTrips.tsx";
+import BuyTripsPage from "./pages/users/buy-trips/BuyTripsPage.tsx";
 import OverviewPage from "./pages/users/overview/OverviewPage.tsx";
 import TransactionHisotryPage from "./pages/users/transaction-history/TransactionHisotryPage.tsx";
 import AllLocationsPage from "./pages/users/location-details/AllLocationsPage.tsx";
-import LocationDetailsPage from "./pages/users/location-details/individual-locations/LocationDetailsPage.tsx"
+import LocationDetailsPage from "./pages/users/location-details/individual-locations/LocationDetailsPage.tsx";
+import CartPage from "./pages/users/cart/CartPage.tsx";
 
 const router = createBrowserRouter([
   { path: "/", index: true, element: <Login /> },
@@ -21,7 +22,11 @@ const router = createBrowserRouter([
       { path: "home", element: <UsersHomePage /> },
       {
         path: "buy-trips",
-        element: <BuyTrips />,
+        element: <BuyTripsPage />,
+      },
+      {
+        path: "cart",
+        element: <CartPage />,
       },
       {
         path: "overview",
