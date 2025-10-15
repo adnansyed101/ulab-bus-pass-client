@@ -28,12 +28,18 @@ export function NumberInput({
   const [value, setValue] = useState(defaultValue);
 
   const handleIncrement = () => {
+    if (value === 0) return setValue(1);
+
+    if (value === 1) return setValue(5);
+
     const newValue = Math.min(value + step, max);
     setValue(newValue);
     onChange?.(newValue);
   };
 
   const handleDecrement = () => {
+     if (value === 5) return setValue(1);
+
     const newValue = Math.max(value - step, min);
     setValue(newValue);
     onChange?.(newValue);
