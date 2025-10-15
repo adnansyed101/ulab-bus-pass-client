@@ -1,5 +1,5 @@
 import { Outlet } from "react-router";
-import { AppSidebar } from "@/components/app-sidebar";
+import { AppSidebar } from "@/components/sidebar/app-sidebar";
 import ModeToggle from "@/components/shared/header/mode-toggle";
 import { Separator } from "@/components/ui/separator";
 import {
