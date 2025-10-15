@@ -1,4 +1,4 @@
-import { NumberInput } from "@/components/number-input";
+import { NumberInput } from "@/components/shared/number-input";
 import { Button } from "@/components/ui/button";
 import {
   Table,

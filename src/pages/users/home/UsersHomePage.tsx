@@ -1,6 +1,6 @@
 import { Separator } from "@radix-ui/react-dropdown-menu";
 import ShowCards from "./components/show-cards";
-import { BusSeatLayout } from "@/components/bus-seat-layout";
+import { BusSeatLayout } from "@/components/shared/bus-seat-layout";
 
 const UsersHomePage = () => {
   const remainingTrips = [

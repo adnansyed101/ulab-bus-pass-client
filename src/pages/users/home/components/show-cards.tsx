@@ -1,4 +1,4 @@
-import { UserTripsCard } from "@/components/user-trips-card";
+import { UserTripsCard } from "@/components/shared/user-trips-card";
 import type { UserTripsCardProps } from "@/lib/types";
 
 const ShowCards = ({ cardData }: { cardData: UserTripsCardProps[] }) => {
