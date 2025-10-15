@@ -9,9 +9,9 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { MoveRight, ShoppingBag, } from "lucide-react";
+import { MoveRight, ShoppingBag } from "lucide-react";
 
-const TripCart = () => {
+const CartPage = () => {
   return (
     <>
       <h4 className="flex gap-2 items-center">
@@ -47,10 +47,10 @@ const TripCart = () => {
         </TableFooter>
       </Table>
       <div className="flex justify-end mt-4">
-        <Button size='lg'>Purchase</Button>
+        <Button size="lg">Purchase</Button>
       </div>
     </>
   );
 };
 
-export default TripCart;
+export default CartPage;
