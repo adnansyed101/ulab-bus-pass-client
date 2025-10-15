@@ -6,6 +6,7 @@ import {
   Search,
   ShoppingCart,
   TableOfContents,
+  Ticket,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
@@ -36,6 +37,11 @@ const navMain = [
   {
     title: "Buy Trips",
     url: "/users/buy-trips",
+    icon: Ticket,
+  },
+  {
+    title: "Cart",
+    url: "/users/cart",
     icon: ShoppingCart,
   },
   {
