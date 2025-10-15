@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import ThemeProvider from "./providers/theme-provider.tsx";
-import Login from "./pages/auth/Login.tsx";
+import UserLogin from "./pages/auth/user-login/UserLogin.tsx";
 import MainLayout from "./layout/MainLayout.tsx";
 import UsersHomePage from "./pages/users/home/UsersHomePage.tsx";
 import BuyTripsPage from "./pages/users/buy-trips/BuyTripsPage.tsx";
@@ -14,7 +14,7 @@ import LocationDetailsPage from "./pages/users/location-details/individual-locat
 import CartPage from "./pages/users/cart/CartPage.tsx";
 
 const router = createBrowserRouter([
-  { path: "/", index: true, element: <Login /> },
+  { path: "/", index: true, element: <UserLogin /> },
   {
     path: "users",
     element: <MainLayout />,
@@ -45,6 +45,10 @@ const router = createBrowserRouter([
         element: <LocationDetailsPage />,
       },
     ],
+  },
+  {
+    path: "admin-login",
+    element: <div>Hello World</div>,
   },
 ]);
 
