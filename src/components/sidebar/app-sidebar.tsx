@@ -84,6 +84,11 @@ const adminLinks = [
         url: "/admin/user-list",
         icon: User,
       },
+      {
+        title: "Transaction History",
+        url: "/admin/transaction-history",
+        icon: TableOfContents,
+      },
     ],
   },
   {
