@@ -9,21 +9,22 @@ import {
 } from "@/components/ui/sidebar";
 import { NavLink } from "react-router";
 
-export function NavMain({
-  items,
-}: {
+interface NavMainProps {
+  label: string;
   items: {
     title: string;
     url: string;
     icon?: LucideIcon;
     isActive?: boolean;
   }[];
-}) {
+}
+
+export function NavMain({ links }: { links: NavMainProps }) {
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>Essential Links</SidebarGroupLabel>
+      <SidebarGroupLabel>{links.label}</SidebarGroupLabel>
       <SidebarMenu>
-        {items.map((item) => (
+        {links.items.map((item) => (
           <SidebarMenuItem key={item.title}>
             <SidebarMenuButton tooltip={item.title} asChild>
               <NavLink to={item.url}>
