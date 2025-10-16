@@ -26,7 +26,7 @@ export function NavMain({ links }: { links: NavMainProps }) {
       <SidebarMenu>
         {links.items.map((item) => (
           <SidebarMenuItem key={item.title}>
-            <SidebarMenuButton tooltip={item.title} asChild>
+            <SidebarMenuButton tooltip={item.title} asChild className="hover:text-white/90">
               <NavLink to={item.url}>
                 {item.icon && <item.icon />}
                 <span>{item.title}</span>
