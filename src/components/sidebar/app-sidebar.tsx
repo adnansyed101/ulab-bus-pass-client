@@ -1,12 +1,16 @@
 import * as React from "react";
 import {
   Bus,
+  BusFront,
   Home,
+  Route,
   ScrollText,
   Search,
   ShoppingCart,
   TableOfContents,
   Ticket,
+  User,
+  UserPlus,
 } from "lucide-react";
 import { NavMain } from "@/components/sidebar/nav-main";
 import { NavUser } from "@/components/sidebar/nav-user";
@@ -75,6 +79,11 @@ const adminLinks = [
         url: "/admin/home",
         icon: Home,
       },
+      {
+        title: "User List",
+        url: "/admin/user-list",
+        icon: User,
+      },
     ],
   },
   {
@@ -82,18 +91,18 @@ const adminLinks = [
     items: [
       {
         title: "Bus",
-        url: "/admin/home",
-        icon: Home,
+        url: "/admin/register-bus",
+        icon: BusFront,
       },
       {
         title: "Conductor",
-        url: "#",
-        icon: Home,
+        url: "/admin/register-conductor",
+        icon: UserPlus,
       },
       {
         title: "Route",
-        url: "#",
-        icon: Home,
+        url: "/admin/register-route",
+        icon: Route,
       },
     ],
   },
