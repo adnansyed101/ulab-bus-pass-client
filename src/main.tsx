@@ -14,10 +14,26 @@ import LocationDetailsPage from "./pages/users/location-details/individual-locat
 import CartPage from "./pages/users/cart/CartPage.tsx";
 import AdminLogin from "./pages/auth/admin-login/AdminLogin.tsx";
 import AdminHomePage from "./pages/admin/home/AdminHomePage.tsx";
+import AuthLayout from "./layout/AuthLayout.tsx";
 
 const router = createBrowserRouter([
+  //  Auth Links
+  {
+    path: "/",
+    element: <AuthLayout />,
+    children: [
+      {
+        path: "/",
+        index: true,
+        element: <UserLogin />,
+      },
+      {
+        path: "admin-login",
+        element: <AdminLogin />,
+      },
+    ],
+  },
   // User Links
-  { path: "/", index: true, element: <UserLogin /> },
   {
     path: "user",
     element: <MainLayout />,
@@ -50,10 +66,6 @@ const router = createBrowserRouter([
     ],
   },
   // Admin Links
-  {
-    path: "admin-login",
-    element: <AdminLogin />,
-  },
   {
     path: "admin",
     element: <MainLayout />,
