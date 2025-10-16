@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router";
 import Login from "./pages/auth/user-login/UserLogin";
 import UsersHomePage from "./pages/users/home/UsersHomePage";
-import AdminHomePage from "./pages/admin/AdminHomePage";
+import AdminHomePage from "./pages/admin/home/AdminHomePage";
 
 const App = () => {
   const role: "user" | "admin" | "conductors" = "user";
