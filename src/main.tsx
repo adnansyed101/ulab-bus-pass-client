@@ -13,7 +13,7 @@ import AllLocationsPage from "./pages/users/location-details/AllLocationsPage.ts
 import LocationDetailsPage from "./pages/users/location-details/individual-locations/LocationDetailsPage.tsx";
 import CartPage from "./pages/users/cart/CartPage.tsx";
 import AdminLogin from "./pages/auth/admin-login/AdminLogin.tsx";
-import AdminHomePage from "./pages/admin/AdminHomePage.tsx";
+import AdminHomePage from "./pages/admin/home/AdminHomePage.tsx";
 
 const router = createBrowserRouter([
   // User Links
