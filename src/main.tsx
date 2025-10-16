@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   // User Links
   { path: "/", index: true, element: <UserLogin /> },
   {
-    path: "users",
+    path: "user",
     element: <MainLayout />,
     children: [
       { path: "home", element: <UsersHomePage /> },

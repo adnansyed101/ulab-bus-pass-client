@@ -30,33 +30,33 @@ const user = {
 const userLinks = [
   {
     title: "Home",
-    url: "/users/home",
+    url: "/user/home",
     icon: Home,
     isActive: true,
   },
   {
     title: "Buy Trips",
-    url: "/users/buy-trips",
+    url: "/user/buy-trips",
     icon: Ticket,
   },
   {
     title: "Cart",
-    url: "/users/cart",
+    url: "/user/cart",
     icon: ShoppingCart,
   },
   {
     title: "Overview",
-    url: "/users/overview",
+    url: "/user/overview",
     icon: Search,
   },
   {
     title: "Transaction History",
-    url: "/users/transaction-history",
+    url: "/user/transaction-history",
     icon: TableOfContents,
   },
   {
     title: "Location Details",
-    url: "/users/location-details",
+    url: "/user/location-details",
     icon: ScrollText,
   },
 ];
