@@ -15,6 +15,8 @@ import CartPage from "./pages/users/cart/CartPage.tsx";
 import AdminLogin from "./pages/auth/admin-login/AdminLogin.tsx";
 import AdminHomePage from "./pages/admin/home/AdminHomePage.tsx";
 import AuthLayout from "./layout/AuthLayout.tsx";
+import UserListPage from "./pages/admin/user-list/UserListPage.tsx";
+import AllTransactionHisotryPage from "./pages/admin/transaction-history/AllTransactionHisotryPage.tsx";
 
 const router = createBrowserRouter([
   //  Auth Links
@@ -69,7 +71,14 @@ const router = createBrowserRouter([
   {
     path: "admin",
     element: <MainLayout />,
-    children: [{ path: "home", element: <AdminHomePage /> }],
+    children: [
+      { path: "home", element: <AdminHomePage /> },
+      { path: "user-list", element: <UserListPage /> },
+      {
+        path: "all-transaction-history",
+        element: <AllTransactionHisotryPage />,
+      },
+    ],
   },
 ]);
 
