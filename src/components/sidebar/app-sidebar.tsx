@@ -86,7 +86,7 @@ const adminLinks = [
       },
       {
         title: "Transaction History",
-        url: "/admin/transaction-history",
+        url: "/admin/all-transaction-history",
         icon: TableOfContents,
       },
     ],
