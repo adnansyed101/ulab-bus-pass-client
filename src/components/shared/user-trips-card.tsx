@@ -28,7 +28,6 @@ interface UserTripsCardProps {
 }
 
 export function UserTripsCard({
-  id,
   destination,
   remainingTrips,
   purchaseDate,
